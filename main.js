@@ -3,8 +3,8 @@ window.onload = () =>{
     const description = document.getElementById("description");
 }
 
-function showPic(whichPic){
-    
+function showPic(event, whichPic){
+    event.preventDefault();
     let text = whichPic.getAttribute("title");
     let source = whichPic.getAttribute("href");
     placeholder.setAttribute("src", source)
