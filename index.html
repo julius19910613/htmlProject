@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+    <!-- 
     <h1>Snapshots</h1>
     <ul>
         <li>
@@ -33,8 +33,28 @@
     </ul>
 
     <img id = "placeholder" src = "images/11.gif" alt="11" /> 
-    <p id = "description">Choose an image.</p>
+    <p id = "description">Choose an image.</p> -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+    </canvas>
+
 
 </body>
 
 </html>
+
+<script>
+
+    const c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+
+    let grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "white");
+
+    ctx.fillStyle = grd;
+    ctx.fillRect(10, 10, 150, 80);
+
+</script>
+
+<style>
+</style>
